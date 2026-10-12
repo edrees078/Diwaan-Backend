@@ -2,6 +2,7 @@ using Diwan.Host.Endpoints.Health;
 using Diwan.Host.Endpoints.Identity;
 using Diwan.Identity.Infrastructure;
 using Diwan.Shared.Common;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +12,7 @@ builder.Services.AddSingleton<IDateTimeProvider, SystemDateTimeProvider>();
 // Register Modules
 builder.Services.AddIdentityModule(builder.Configuration);
 
-// Register OpenAPI / Swagger
+// Register OpenAPI
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
@@ -19,6 +20,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapScalarApiReference();
 }
 
 app.UseHttpsRedirection();
