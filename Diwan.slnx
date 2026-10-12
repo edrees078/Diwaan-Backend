@@ -1,0 +1,20 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Host/">
+    <Project Path="src/Host/Diwan.Host.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/" />
+  <Folder Name="/src/Modules/Identity/" />
+  <Folder Name="/src/Modules/Identity/Identity.Core/">
+    <Project Path="src/Modules/Identity/Identity.Core/Diwan.Identity.Core.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/Identity/Identity.Infrastructure/">
+    <Project Path="src/Modules/Identity/Identity.Infrastructure/Diwan.Identity.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Shared/">
+    <Project Path="src/Shared/Diwan.Shared.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Diwan.Tests/Diwan.Tests.csproj" />
+  </Folder>
+</Solution>
